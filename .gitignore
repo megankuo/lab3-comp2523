@@ -1,0 +1,11 @@
+//npm modules
+node_modules
+
+//dist
+dist
+
+//cache
+.cache
+
+//ds stroe
+.DS_Store

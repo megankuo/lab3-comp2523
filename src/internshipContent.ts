@@ -1,5 +1,5 @@
- const internshipContent: string = `
+const internshipContent: string = `
     <h1>INTERSHIP!!!!!!<h1>
-`
+`;
 
-export default internshipContent
+export default internshipContent;

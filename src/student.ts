@@ -1,21 +1,17 @@
-interface Location {
-    lat: number,
-    lng: number
-}
-
-export default class Student {
-    firstName: string
-    lastName: string
-    location: {
-        lat: number,
-        lng: number
-    }
-    constructor(firstName: string, lastName: string, fakeLoca: Location) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.location = fakeLoca
-    }
-    get getFullName() {
-        return this.firstName + this.lastName
-    }
+import faker from 'faker';
+export class Student {
+  firstName: string;
+  lastName: string;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
+  constructor() {
+    this.firstName = faker.name.firstName();
+    this.lastName = faker.name.lastName();
+    this.location = {
+      latitude: parseFloat(faker.address.latitude()),
+      longitude: parseFloat(faker.address.longitude()),
+    };
+  }
 }
